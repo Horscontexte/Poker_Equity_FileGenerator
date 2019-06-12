@@ -17,8 +17,7 @@ const getAllCombos = () => {
 
 const isWomboValid = (wombo) => {
   let x = wombo.split("");
-  if (((x[0] + x[1]) || (x[2] + x[3])) === ((x[4] + x[5]) || (x[6] + x[7]))) {
-    // <3
+  if (((x[0] + x[1]) === (x[4] + x[5])) || ((x[0] + x[1]) === (x[6] + x[7])) || ((x[2] + x[3]) === (x[4] + x[5])) || ((x[2] + x[3]) === (x[6] + x[7]))) {
     return false;
   } else return true;
 };
