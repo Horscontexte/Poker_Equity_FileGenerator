@@ -1,8 +1,0 @@
-src
-test
-coverage
-tsconfig.json
-tslint.json
-.gitignore
-.travis.yml
-.nyc-output
