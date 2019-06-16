@@ -14,7 +14,7 @@ let vilainHandCard2;
 // Création du fichier contenant les résultats
 let path = 'Poker_Equity_Results.csv';
 let data;
-let header = 'hero;vilain;victory_percentage;loose_percentage;split_percentage;\r\n'
+let header = 'hero,vilain;victory_percentage,loose_percentage,split_percentage\r\n'
 fs.writeFile(path);
 fs.appendFileSync(path,header, 'utf8');
 
@@ -66,7 +66,7 @@ const getAllEquity = () => {
         var split = result.equities[0].getEquity() + result.equities[1].getEquity()
         split = 100 - split;
         // On ajoute une ligne au fichier avec toutes les informations
-        var data = wombo + ';' + combo + ';' + result.equities[0].getEquity() + ';' + result.equities[1].getEquity() + ';' + split + ';\r\n';
+        var data = wombo + ',' + combo + ',' + result.equities[0].getEquity() + ',' + result.equities[1].getEquity() + ',' + split + '\r\n';
         fs.appendFileSync(path,data, 'utf8');
         console.log("Document mis à jours avec la rencontre : " + wombo + combo)
       }
@@ -77,7 +77,7 @@ const getAllEquity = () => {
 async function asyncCall() {
   await getAllCombo();
   await getAllEquity();
-  console.log(player1Combo.length + ' Mains possible ;)')
+
 }
 
 asyncCall();
