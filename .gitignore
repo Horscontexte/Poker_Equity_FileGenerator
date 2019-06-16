@@ -1,3 +1,3 @@
+*.node_modules
 Poker_Equity_Results.csv
 pushEquityResultIntoBDD.js
-*.node_modules
