@@ -1,3 +1,4 @@
-*.node_modules
+/node_modules
 Poker_Equity_Results.csv
-pushEquityResultIntoBDD.js
+test.csv
+.gitignore

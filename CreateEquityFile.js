@@ -14,7 +14,7 @@ let vilainHandCard2;
 // Création du fichier contenant les résultats
 let path = 'Poker_Equity_Results.csv';
 let data;
-let header = 'hero,vilain;victory_percentage,loose_percentage,split_percentage\r\n'
+let header = 'hero,vilain,victory_percentage,loose_percentage,split_percentage\r\n'
 fs.writeFile(path);
 fs.appendFileSync(path,header, 'utf8');
 
